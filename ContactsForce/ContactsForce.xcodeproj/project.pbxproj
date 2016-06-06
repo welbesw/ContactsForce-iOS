@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE67A8161D05C41800F9615C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A8151D05C41800F9615C /* AppDelegate.swift */; };
+		BE67A81B1D05C41800F9615C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE67A8191D05C41800F9615C /* Main.storyboard */; };
+		BE67A81D1D05C41800F9615C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE67A81C1D05C41800F9615C /* Assets.xcassets */; };
+		BE67A8201D05C41800F9615C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE67A81E1D05C41800F9615C /* LaunchScreen.storyboard */; };
+		BE67A8321D05C7D900F9615C /* Configuration-sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE67A8301D05C7D900F9615C /* Configuration-sample.plist */; };
+		BE67A8331D05C7D900F9615C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A8311D05C7D900F9615C /* Configuration.swift */; };
+		BE67A8381D05CF7A00F9615C /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE67A8371D05CF7A00F9615C /* Configuration.plist */; };
+		BE67A83A1D05D29600F9615C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A8391D05D29600F9615C /* ContactsViewController.swift */; };
+		BE67A83D1D05D34800F9615C /* SalesforceContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A83C1D05D34800F9615C /* SalesforceContact.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE67A8121D05C41800F9615C /* ContactsForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE67A8151D05C41800F9615C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE67A81A1D05C41800F9615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE67A81C1D05C41800F9615C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE67A81F1D05C41800F9615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE67A8211D05C41800F9615C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE67A8301D05C7D900F9615C /* Configuration-sample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Configuration-sample.plist"; sourceTree = "<group>"; };
+		BE67A8311D05C7D900F9615C /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		BE67A8371D05CF7A00F9615C /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		BE67A8391D05D29600F9615C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		BE67A83C1D05D34800F9615C /* SalesforceContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesforceContact.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE67A80F1D05C41800F9615C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE67A8091D05C41800F9615C = {
+			isa = PBXGroup;
+			children = (
+				BE67A8141D05C41800F9615C /* ContactsForce */,
+				BE67A8131D05C41800F9615C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE67A8131D05C41800F9615C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE67A8121D05C41800F9615C /* ContactsForce.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE67A8141D05C41800F9615C /* ContactsForce */ = {
+			isa = PBXGroup;
+			children = (
+				BE67A83B1D05D34800F9615C /* Salesforce */,
+				BE67A82F1D05C7D900F9615C /* Configuration */,
+				BE67A8151D05C41800F9615C /* AppDelegate.swift */,
+				BE67A8391D05D29600F9615C /* ContactsViewController.swift */,
+				BE67A8191D05C41800F9615C /* Main.storyboard */,
+				BE67A81C1D05C41800F9615C /* Assets.xcassets */,
+				BE67A81E1D05C41800F9615C /* LaunchScreen.storyboard */,
+				BE67A8211D05C41800F9615C /* Info.plist */,
+			);
+			path = ContactsForce;
+			sourceTree = "<group>";
+		};
+		BE67A82F1D05C7D900F9615C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BE67A8311D05C7D900F9615C /* Configuration.swift */,
+				BE67A8371D05CF7A00F9615C /* Configuration.plist */,
+				BE67A8301D05C7D900F9615C /* Configuration-sample.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BE67A83B1D05D34800F9615C /* Salesforce */ = {
+			isa = PBXGroup;
+			children = (
+				BE67A83C1D05D34800F9615C /* SalesforceContact.swift */,
+			);
+			path = Salesforce;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE67A8111D05C41800F9615C /* ContactsForce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE67A8241D05C41800F9615C /* Build configuration list for PBXNativeTarget "ContactsForce" */;
+			buildPhases = (
+				BE67A8361D05CDDB00F9615C /* ShellScript */,
+				BE67A80E1D05C41800F9615C /* Sources */,
+				BE67A80F1D05C41800F9615C /* Frameworks */,
+				BE67A8101D05C41800F9615C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContactsForce;
+			productName = ContactsForce;
+			productReference = BE67A8121D05C41800F9615C /* ContactsForce.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE67A80A1D05C41800F9615C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Centare;
+				TargetAttributes = {
+					BE67A8111D05C41800F9615C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BE67A80D1D05C41800F9615C /* Build configuration list for PBXProject "ContactsForce" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE67A8091D05C41800F9615C;
+			productRefGroup = BE67A8131D05C41800F9615C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE67A8111D05C41800F9615C /* ContactsForce */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE67A8101D05C41800F9615C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE67A8321D05C7D900F9615C /* Configuration-sample.plist in Resources */,
+				BE67A8201D05C41800F9615C /* LaunchScreen.storyboard in Resources */,
+				BE67A8381D05CF7A00F9615C /* Configuration.plist in Resources */,
+				BE67A81D1D05C41800F9615C /* Assets.xcassets in Resources */,
+				BE67A81B1D05C41800F9615C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE67A8361D05CDDB00F9615C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#Configuration plist file location\nSRC_CONFIG_FILE=\"${PROJECT_DIR}/ContactsForce/Configuration/Configuration-sample.plist\"\nDEST_CONFIG_FILE=\"${PROJECT_DIR}/ContactsForce/Configuration/Configuration.plist\"\n\n#If the destination config file doesn't exist - copy if over from the sample\nif [ ! -f $DEST_CONFIG_FILE ]\nthen\n    cp $SRC_CONFIG_FILE $DEST_CONFIG_FILE\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE67A80E1D05C41800F9615C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE67A8331D05C7D900F9615C /* Configuration.swift in Sources */,
+				BE67A83D1D05D34800F9615C /* SalesforceContact.swift in Sources */,
+				BE67A83A1D05D29600F9615C /* ContactsViewController.swift in Sources */,
+				BE67A8161D05C41800F9615C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE67A8191D05C41800F9615C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE67A81A1D05C41800F9615C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE67A81E1D05C41800F9615C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE67A81F1D05C41800F9615C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE67A8221D05C41800F9615C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE67A8231D05C41800F9615C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE67A8251D05C41800F9615C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ContactsForce/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.centare.ContactsForce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE67A8261D05C41800F9615C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ContactsForce/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.centare.ContactsForce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE67A80D1D05C41800F9615C /* Build configuration list for PBXProject "ContactsForce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE67A8221D05C41800F9615C /* Debug */,
+				BE67A8231D05C41800F9615C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE67A8241D05C41800F9615C /* Build configuration list for PBXNativeTarget "ContactsForce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE67A8251D05C41800F9615C /* Debug */,
+				BE67A8261D05C41800F9615C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE67A80A1D05C41800F9615C /* Project object */;
+}

@@ -61,3 +61,7 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
+
+# Configuration file - should not be committed to source
+
+ContactsForce/ContactsForce/Configuration/Configuration.plist
