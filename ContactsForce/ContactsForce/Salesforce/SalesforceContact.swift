@@ -27,7 +27,8 @@ public class SalesforceContact {
             case "lastname":
                 self.lastName = value as? String
             default:
-                print("SalesforceContact field: \(key)")
+                //print("SalesforceContact field: \(key)")
+                break
             }
         }
     }

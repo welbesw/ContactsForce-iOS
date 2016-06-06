@@ -15,6 +15,8 @@ public class SalesforceManager : NSObject, SFRestDelegate {
     //Define a shared instance for singleton
     static let sharedInstance = SalesforceManager()
     
+    let errorDomain = "com.centare.contactforce.salesforcemanager"
+    
     var consumerKey:String = ""
     var redirectUrl:String = ""
     
@@ -59,13 +61,27 @@ public class SalesforceManager : NSObject, SFRestDelegate {
         SalesforceSDKManager.sharedManager().launch()
     }
     
-    func fetchContacts() {
+    func fetchContacts(completion completion: (contacts: [SalesforceContact], error: NSError?) -> ()) {
         //TODO: Confirm that user is authenticated
         let request = SFRestAPI.sharedInstance().requestForQuery("SELECT Id, FirstName, LastName FROM Contact")
         
-        SFRestAPI.sharedInstance().send(request, delegate: self)
+        SFRestAPI.sharedInstance().sendRESTRequest(request, failBlock: { (error) in
+            //Handle the error
+            print("sendRESTRequest error: \(error.localizedDescription)")
+        }) { (response) in
+                //Parse the response
+            print("sendRESTRequest response")
+            guard let records = response["records"] as? [[String : AnyObject]] else {
+                let error = NSError(domain: self.errorDomain, code: -100, userInfo: nil)
+                completion(contacts: [], error: error)
+                return
+            }
+            let contacts = records.map{ SalesforceContact(dictionary: $0) }
+            completion(contacts: contacts, error: nil)
+        }
     }
     
+    /*
     //MARK: SFRestDelegate
     
     @objc public func request(request: SFRestRequest, didLoadResponse dataResponse: AnyObject) {
@@ -87,6 +103,6 @@ public class SalesforceManager : NSObject, SFRestDelegate {
         //Request timed out
         print("requestDidTimeout")
     }
-    
+    */
     
 }

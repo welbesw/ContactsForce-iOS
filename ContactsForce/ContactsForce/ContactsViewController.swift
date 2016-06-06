@@ -19,7 +19,17 @@ class ContactsViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        SalesforceManager.sharedInstance.fetchContacts()
+        SalesforceManager.sharedInstance.fetchContacts { (contacts, error) in
+            dispatch_async(dispatch_get_main_queue(), { 
+                if error == nil {
+                    self.contacts = contacts
+                    self.tableView.reloadData()
+                } else {
+                    let alertController = UIAlertController(title: "Error Loading Contacts", message: error!.localizedDescription, preferredStyle: .Alert)
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                }
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
