@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2BA5342BBE8422EECDEBB0 /* Pods_ContactsForce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BCB48436D00EB4279E1ED2 /* Pods_ContactsForce.framework */; };
 		BE67A8161D05C41800F9615C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A8151D05C41800F9615C /* AppDelegate.swift */; };
 		BE67A81B1D05C41800F9615C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE67A8191D05C41800F9615C /* Main.storyboard */; };
 		BE67A81D1D05C41800F9615C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE67A81C1D05C41800F9615C /* Assets.xcassets */; };
@@ -16,9 +17,12 @@
 		BE67A8381D05CF7A00F9615C /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE67A8371D05CF7A00F9615C /* Configuration.plist */; };
 		BE67A83A1D05D29600F9615C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A8391D05D29600F9615C /* ContactsViewController.swift */; };
 		BE67A83D1D05D34800F9615C /* SalesforceContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A83C1D05D34800F9615C /* SalesforceContact.swift */; };
+		BE67A83F1D05D59300F9615C /* SalesforceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A83E1D05D59300F9615C /* SalesforceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81F6D9D4AB66A02F03934537 /* Pods-ContactsForce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsForce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsForce/Pods-ContactsForce.debug.xcconfig"; sourceTree = "<group>"; };
+		84BCB48436D00EB4279E1ED2 /* Pods_ContactsForce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsForce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE67A8121D05C41800F9615C /* ContactsForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE67A8151D05C41800F9615C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE67A81A1D05C41800F9615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		BE67A8371D05CF7A00F9615C /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		BE67A8391D05D29600F9615C /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		BE67A83C1D05D34800F9615C /* SalesforceContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesforceContact.swift; sourceTree = "<group>"; };
+		BE67A83E1D05D59300F9615C /* SalesforceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesforceManager.swift; sourceTree = "<group>"; };
+		F37759A4080F99D938784408 /* Pods-ContactsForce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsForce.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsForce/Pods-ContactsForce.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2BA5342BBE8422EECDEBB0 /* Pods_ContactsForce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923CA1748A2EB83D52D5D7B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81F6D9D4AB66A02F03934537 /* Pods-ContactsForce.debug.xcconfig */,
+				F37759A4080F99D938784408 /* Pods-ContactsForce.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BE67A8091D05C41800F9615C = {
 			isa = PBXGroup;
 			children = (
 				BE67A8141D05C41800F9615C /* ContactsForce */,
 				BE67A8131D05C41800F9615C /* Products */,
+				923CA1748A2EB83D52D5D7B2 /* Pods */,
+				DD4A1419961E770F4B32AC5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,8 +106,17 @@
 			isa = PBXGroup;
 			children = (
 				BE67A83C1D05D34800F9615C /* SalesforceContact.swift */,
+				BE67A83E1D05D59300F9615C /* SalesforceManager.swift */,
 			);
 			path = Salesforce;
+			sourceTree = "<group>";
+		};
+		DD4A1419961E770F4B32AC5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84BCB48436D00EB4279E1ED2 /* Pods_ContactsForce.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,10 +126,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE67A8241D05C41800F9615C /* Build configuration list for PBXNativeTarget "ContactsForce" */;
 			buildPhases = (
+				D0602FF3EC530649F0741CD8 /* [CP] Check Pods Manifest.lock */,
 				BE67A8361D05CDDB00F9615C /* ShellScript */,
 				BE67A80E1D05C41800F9615C /* Sources */,
 				BE67A80F1D05C41800F9615C /* Frameworks */,
 				BE67A8101D05C41800F9615C /* Resources */,
+				15620C261772162C6EC0218D /* [CP] Embed Pods Frameworks */,
+				775A651B3869A8D0A9CC466A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +192,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		15620C261772162C6EC0218D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactsForce/Pods-ContactsForce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		775A651B3869A8D0A9CC466A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactsForce/Pods-ContactsForce-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BE67A8361D05CDDB00F9615C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +235,21 @@
 			shellPath = /bin/sh;
 			shellScript = "#Configuration plist file location\nSRC_CONFIG_FILE=\"${PROJECT_DIR}/ContactsForce/Configuration/Configuration-sample.plist\"\nDEST_CONFIG_FILE=\"${PROJECT_DIR}/ContactsForce/Configuration/Configuration.plist\"\n\n#If the destination config file doesn't exist - copy if over from the sample\nif [ ! -f $DEST_CONFIG_FILE ]\nthen\n    cp $SRC_CONFIG_FILE $DEST_CONFIG_FILE\nfi";
 		};
+		D0602FF3EC530649F0741CD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -182,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE67A83F1D05D59300F9615C /* SalesforceManager.swift in Sources */,
 				BE67A8331D05C7D900F9615C /* Configuration.swift in Sources */,
 				BE67A83D1D05D34800F9615C /* SalesforceContact.swift in Sources */,
 				BE67A83A1D05D29600F9615C /* ContactsViewController.swift in Sources */,
@@ -248,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -288,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,6 +374,7 @@
 		};
 		BE67A8251D05C41800F9615C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F6D9D4AB66A02F03934537 /* Pods-ContactsForce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactsForce/Info.plist;
@@ -309,6 +386,7 @@
 		};
 		BE67A8261D05C41800F9615C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37759A4080F99D938784408 /* Pods-ContactsForce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactsForce/Info.plist;
@@ -337,6 +415,7 @@
 				BE67A8261D05C41800F9615C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

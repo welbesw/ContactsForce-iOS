@@ -13,9 +13,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    override init() {
+        super.init()
+        
+        //Setup the SalesforceManager
+        SalesforceManager.sharedInstance.setupSDKManager()
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Launch the salesforce SDK
+        SalesforceManager.sharedInstance.launch()
+        
+        return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        print("application:openURL called: \(url.absoluteString)")
+        
         return true
     }
 

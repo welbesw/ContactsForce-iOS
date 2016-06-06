@@ -1,0 +1,49 @@
+PODS:
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - SalesforceNetwork (4.1.2):
+    - SalesforceNetwork/SalesforceNetwork (= 4.1.2)
+  - SalesforceNetwork/SalesforceNetwork (4.1.2):
+    - SalesforceSDKCore
+  - SalesforceRestAPI (4.1.2):
+    - SalesforceRestAPI/SalesforceRestAPI (= 4.1.2)
+  - SalesforceRestAPI/SalesforceRestAPI (4.1.2):
+    - SalesforceNetwork
+    - SalesforceSDKCore
+  - SalesforceSDKCore (4.1.2):
+    - SalesforceSDKCore/SalesforceSDKCore (= 4.1.2)
+  - SalesforceSDKCore/SalesforceSDKCore (4.1.2):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/arc (= 4.1.2)
+    - SalesforceSDKCore/SalesforceSDKCore/base (= 4.1.2)
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc (= 4.1.2)
+  - SalesforceSDKCore/SalesforceSDKCore/arc (4.1.2):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc
+  - SalesforceSDKCore/SalesforceSDKCore/base (4.1.2):
+    - CocoaLumberjack (~> 2.2.0)
+  - SalesforceSDKCore/SalesforceSDKCore/no-arc (4.1.2):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base
+
+DEPENDENCIES:
+  - SalesforceNetwork
+  - SalesforceRestAPI
+  - SalesforceSDKCore
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  SalesforceNetwork: 449b9c847a97377d988588a75240aa0474a0ffa9
+  SalesforceRestAPI: e80000bf58debaf22c9eae9dedcad8febecd2620
+  SalesforceSDKCore: 46b14b5196822c7724bde0d86ec141dc630f402d
+
+PODFILE CHECKSUM: 3d4f350e2726f2bd64f8a7df62969c80b42bbcee
+
+COCOAPODS: 1.0.1
