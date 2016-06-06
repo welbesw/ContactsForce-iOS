@@ -2,24 +2,57 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jql-zK-G3E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Salesforce Contacts-->
         <scene sceneID="pkl-kZ-hFn">
             <objects>
                 <tableViewController id="rdF-qL-9Ot" customClass="ContactsViewController" customModule="ContactsForce" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F71-zJ-cAU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="F71-zJ-cAU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" id="Ksn-yE-hkW">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="68" id="Ksn-yE-hkW" customClass="ContactCell" customModule="ContactsForce" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ksn-yE-hkW" id="xyq-ZR-crq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="67.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnW-NB-dxa">
+                                            <rect key="frame" x="8" y="8" width="551" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="DPx-Sb-tZc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="john.smith@company.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6M-qP-swc">
+                                            <rect key="frame" x="8" y="37" width="551" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="vlg-4Q-iAE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nnW-NB-dxa" firstAttribute="trailing" secondItem="xyq-ZR-crq" secondAttribute="trailingMargin" id="Fwg-9n-tin"/>
+                                        <constraint firstItem="M6M-qP-swc" firstAttribute="leading" secondItem="xyq-ZR-crq" secondAttribute="leadingMargin" id="Wau-sE-El3"/>
+                                        <constraint firstItem="nnW-NB-dxa" firstAttribute="leading" secondItem="xyq-ZR-crq" secondAttribute="leadingMargin" id="cpy-D3-reh"/>
+                                        <constraint firstItem="nnW-NB-dxa" firstAttribute="top" secondItem="xyq-ZR-crq" secondAttribute="topMargin" id="iNR-fd-yvw"/>
+                                        <constraint firstItem="M6M-qP-swc" firstAttribute="trailing" secondItem="xyq-ZR-crq" secondAttribute="trailingMargin" id="tsJ-E1-zJ3"/>
+                                        <constraint firstItem="M6M-qP-swc" firstAttribute="top" secondItem="nnW-NB-dxa" secondAttribute="bottom" constant="8" id="zNG-ey-9F7"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emailLabel" destination="M6M-qP-swc" id="R5B-kT-wKx"/>
+                                    <outlet property="nameLabel" destination="nnW-NB-dxa" id="qjk-lU-oK1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -28,6 +61,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Salesforce Contacts" id="euc-Y8-seZ"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="P3a-hE-dsf">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshContacts:" destination="rdF-qL-9Ot" eventType="valueChanged" id="Fhl-Ea-Kup"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="601-jW-jW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -63,7 +63,7 @@ public class SalesforceManager : NSObject, SFRestDelegate {
     
     func fetchContacts(completion completion: (contacts: [SalesforceContact], error: NSError?) -> ()) {
         //TODO: Confirm that user is authenticated
-        let request = SFRestAPI.sharedInstance().requestForQuery("SELECT Id, FirstName, LastName FROM Contact")
+        let request = SFRestAPI.sharedInstance().requestForQuery("SELECT Id, FirstName, LastName, Email FROM Contact")
         
         SFRestAPI.sharedInstance().sendRESTRequest(request, failBlock: { (error) in
             //Handle the error

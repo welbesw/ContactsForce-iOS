@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C2BA5342BBE8422EECDEBB0 /* Pods_ContactsForce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BCB48436D00EB4279E1ED2 /* Pods_ContactsForce.framework */; };
+		BE18E8501D060AB3009CF68B /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18E84F1D060AB3009CF68B /* ContactCell.swift */; };
 		BE67A8161D05C41800F9615C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67A8151D05C41800F9615C /* AppDelegate.swift */; };
 		BE67A81B1D05C41800F9615C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE67A8191D05C41800F9615C /* Main.storyboard */; };
 		BE67A81D1D05C41800F9615C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE67A81C1D05C41800F9615C /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		81F6D9D4AB66A02F03934537 /* Pods-ContactsForce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsForce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsForce/Pods-ContactsForce.debug.xcconfig"; sourceTree = "<group>"; };
 		84BCB48436D00EB4279E1ED2 /* Pods_ContactsForce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsForce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE18E84F1D060AB3009CF68B /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		BE67A8121D05C41800F9615C /* ContactsForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE67A8151D05C41800F9615C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE67A81A1D05C41800F9615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				BE67A82F1D05C7D900F9615C /* Configuration */,
 				BE67A8151D05C41800F9615C /* AppDelegate.swift */,
 				BE67A8391D05D29600F9615C /* ContactsViewController.swift */,
+				BE18E84F1D060AB3009CF68B /* ContactCell.swift */,
 				BE67A8191D05C41800F9615C /* Main.storyboard */,
 				BE67A81C1D05C41800F9615C /* Assets.xcassets */,
 				BE67A81E1D05C41800F9615C /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE18E8501D060AB3009CF68B /* ContactCell.swift in Sources */,
 				BE67A83F1D05D59300F9615C /* SalesforceManager.swift in Sources */,
 				BE67A8331D05C7D900F9615C /* Configuration.swift in Sources */,
 				BE67A83D1D05D34800F9615C /* SalesforceContact.swift in Sources */,

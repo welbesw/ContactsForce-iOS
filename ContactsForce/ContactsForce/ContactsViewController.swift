@@ -19,17 +19,7 @@ class ContactsViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        SalesforceManager.sharedInstance.fetchContacts { (contacts, error) in
-            dispatch_async(dispatch_get_main_queue(), { 
-                if error == nil {
-                    self.contacts = contacts
-                    self.tableView.reloadData()
-                } else {
-                    let alertController = UIAlertController(title: "Error Loading Contacts", message: error!.localizedDescription, preferredStyle: .Alert)
-                    self.presentViewController(alertController, animated: true, completion: nil)
-                }
-            })
-        }
+        reloadContacts()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +41,7 @@ class ContactsViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath) as! ContactCell
 
         // Configure the cell...
         
@@ -60,9 +50,29 @@ class ContactsViewController: UITableViewController {
         let firstName = contact.firstName != nil ? contact.firstName! : ""
         let lastName = contact.lastName != nil ? contact.lastName! : ""
         
-        cell.textLabel?.text = "\(firstName) \(lastName)"
+        cell.nameLabel.text = "\(firstName) \(lastName)"
+        cell.emailLabel.text = (contact.email ?? "").isEmpty ? "" : contact.email!
 
         return cell
+    }
+    
+    @IBAction func refreshContacts(sender: UIRefreshControl) {
+        reloadContacts()
+    }
+    
+    func reloadContacts() {
+        SalesforceManager.sharedInstance.fetchContacts { (contacts, error) in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.refreshControl?.endRefreshing()
+                if error == nil {
+                    self.contacts = contacts
+                    self.tableView.reloadData()
+                } else {
+                    let alertController = UIAlertController(title: "Error Loading Contacts", message: error!.localizedDescription, preferredStyle: .Alert)
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                }
+            })
+        }
     }
 
     /*

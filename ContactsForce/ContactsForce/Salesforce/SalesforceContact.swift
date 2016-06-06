@@ -13,6 +13,7 @@ public class SalesforceContact {
     public var id: String?
     public var firstName: String?
     public var lastName: String?
+    public var email: String?
     
     //Method to initialize with JSON dict returned by the  API
     public init(dictionary: [String : AnyObject]) {
@@ -26,6 +27,8 @@ public class SalesforceContact {
                 self.firstName = value as? String
             case "lastname":
                 self.lastName = value as? String
+            case "email":
+                self.email = value as? String
             default:
                 //print("SalesforceContact field: \(key)")
                 break
