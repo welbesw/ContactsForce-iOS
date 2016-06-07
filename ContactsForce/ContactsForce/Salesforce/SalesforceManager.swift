@@ -10,7 +10,7 @@ import Foundation
 import SalesforceSDKCore
 import SalesforceRestAPI
 
-public class SalesforceManager : NSObject, SFRestDelegate {
+public class SalesforceManager : NSObject {
     
     //Define a shared instance for singleton
     static let sharedInstance = SalesforceManager()
